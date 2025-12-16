@@ -383,7 +383,9 @@
             "None",
             "LocalUserSecurity",
             "PluginSecurity",
-            "RobloxScriptSecurity"
+            "RobloxScriptSecurity",
+            "NotAccessibleSecurity",
+            "RobloxSecurity"
           ]
         },
         "luau-lsp.inlayHints.parameterNames": {
