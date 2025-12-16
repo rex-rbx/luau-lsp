@@ -24,20 +24,8 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
           draft: true
-
-  build-lune:
-    needs: ["create-release"]
-    name: Run Lune Build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Run Lune Tasks
-        run: |
-          lune run cloud/execute_task.luau test.project.rbxl cloud/publishing_task.luau
-
   build-vsix:
-    needs: ["create-release", "build-lune"]
+    needs: ["create-release"]
     name: Build VSCode Extension
     runs-on: ubuntu-latest
     steps:
