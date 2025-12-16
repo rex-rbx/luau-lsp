@@ -35,7 +35,8 @@ jobs:
           python dumpRobloxTypes.py LocalUserSecurity > globalTypes.LocalUserSecurity.d.luau
           python dumpRobloxTypes.py PluginSecurity > globalTypes.PluginSecurity.d.luau
           python dumpRobloxTypes.py RobloxScriptSecurity > globalTypes.RobloxScriptSecurity.d.luau
-          python dumpRobloxTypes.py > globalTypes.d.lua
+          python dumpRobloxTypes.py NotAccessibleSecurity > globalTypes.NotAccessibleSecurity.d.luau
+          python dumpRobloxTypes.py RobloxSecurity > globalTypes.RobloxSecurity.d.luau
 
       - name: Update API docs
         run: |
